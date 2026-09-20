@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도네프로그램 - 오타 없는 스마트한 PC 라이프</title>
+    <!-- 세련된 무료 폰트인 '프리텐다드' 적용 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    
+    <style>
+        /* --- 기본 초기화 및 폰트 설정 --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; color: #333; line-height: 1.6; background-color: #ffffff; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* --- 공통 스타일 --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-title { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 50px; color: #111; }
+        
+        /* --- 헤더 (상단 네비게이션) --- */
+        header { border-bottom: 1px solid #eaeaea; position: fixed; width: 100%; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: #0056b3; letter-spacing: -1px; }
+        .nav-links a { margin-left: 30px; font-weight: 500; font-size: 1rem; color: #555; transition: color 0.3s; }
+        .nav-links a:hover { color: #0056b3; }
+        .nav-btn { background-color: #0056b3; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; }
+        .nav-btn:hover { background-color: #004494; }
+
+        /* --- 히어로 섹션 (메인 화면) --- */
+        .hero { padding: 160px 0 100px; background-color: #f8fbff; text-align: center; }
+        .hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 20px; color: #111; }
+        .hero p { font-size: 1.2rem; color: #666; margin-bottom: 40px; }
+        .hero-img-placeholder { width: 100%; max-width: 800px; height: 400px; background-color: #e2e8f0; border-radius: 16px; margin: 40px auto 0; display: flex; justify-content: center; align-items: center; color: #94a3b8; font-size: 1.2rem; border: 2px dashed #cbd5e1; }
+        
+        /* 메인 다운로드 버튼 */
+        .btn-download { display: inline-flex; align-items: center; justify-content: center; background-color: #0056b3; color: white; padding: 18px 40px; font-size: 1.2rem; font-weight: 700; border-radius: 50px; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0, 86, 179, 0.2); cursor: pointer; border: none; }
+        .btn-download:hover { background-color: #004494; transform: translateY(-3px); box-shadow: 0 15px 25px rgba(0, 86, 179, 0.3); }
+        .btn-download span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; margin-left: 10px; }
+        
+        .security-note { font-size: 0.9rem; color: #888; margin-top: 15px; }
+
+        /* --- 특징 섹션 --- */
+        .features { padding: 100px 0; background-color: #fff; }
+        .features-grid { display: flex; justify-content: space-between; gap: 30px; }
+        .feature-card { flex: 1; padding: 40px 30px; background: #f8f9fa; border-radius: 16px; text-align: center; transition: transform 0.3s; }
+        .feature-card:hover { transform: translateY(-10px); }
+        .feature-icon { font-size: 3rem; margin-bottom: 20px; }
+        .feature-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; }
+        .feature-card p { font-size: 1rem; color: #666; }
+
+        /* --- 푸터 --- */
+        footer { background-color: #1a1a1a; color: #888; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+        footer .logo { color: #fff; display: block; margin-bottom: 15px; font-size: 1.2rem; }
+
+        /* --- 반응형 (모바일 뷰) --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .features-grid { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 헤더 -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">도네프로그램</a>
+            <nav class="nav-links">
+                <a href="#features">주요 기능</a>
+                <a href="#guide">사용 가이드</a>
+                <a href="#download" class="nav-btn">무료 다운로드</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 메인 히어로 섹션 -->
+    <main>
+        <section class="hero" id="download">
+            <div class="container">
+                <h1>오타 스트레스 끝!<br>마우스 커서가 한/영 상태를 알려줍니다.</h1>
+                <p>타이핑하기 전에 커서 색상만 보세요. 백그라운드에서 가볍고 완벽하게 동작합니다.</p>
+                
+                <!-- 다운로드 버튼 (여기에 실제 압축파일 경로를 넣습니다) -->
+                <a href="CursorChanger_v1.0.zip" class="btn-download" onclick="alert('다운로드가 시작됩니다. 압축을 풀고 실행해 주세요!');">
+                    Windows용 다운로드 <span>(무료)</span>
+                </a>
+                <!-- 보안 경고 안내문 (매우 중요!) -->
+                <p class="security-note">※ 실행 시 파란색 [Windows PC 보호] 창이 뜨면 <b>'추가 정보' → '실행'</b>을 눌러주세요.</p>
+
+                <!-- 시연 GIF 들어갈 자리 -->
+                <div class="hero-img-placeholder">
+                    [여기에 직접 만드신 커서 변환 시연 GIF 영상이 들어갑니다]
+                </div>
+            </div>
+        </section>
+
+        <!-- 특징 섹션 -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">왜 도네프로그램를 써야 할까요?</h2>
+                <div class="features-grid">
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>직관적인 상태 표시</h3>
+                        <p>파란색은 한글, 초록색은 영어 소문자, 빨간색은 대문자. 마우스 커서만 봐도 현재 입력 상태를 100% 확신할 수 있습니다.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🖱️</div>
+                        <h3>마우스 롱클릭 제어</h3>
+                        <p>키보드 한/영 키를 누를 필요 없이, 마우스를 0.8초간 꾹 누르면 상태가 즉시 변환되며 윈도우 시스템과 완벽히 동기화됩니다.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>초경량 & 단축키 제어</h3>
+                        <p>메모리를 거의 차지하지 않는 최적화된 설계. 'Ctrl + Shift' 단축키로 필요할 때 언제든 프로그램을 켜고 끌 수 있습니다.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <span class="logo">도네프로그램</span>
+            <p>Copyright © 2026. All rights reserved.</p>
+            <p>본 소프트웨어는 현재 베타 버전으로 완전 무료로 제공됩니다.</p>
+        </div>
+    </footer>
+
+    <!-- 자바스크립트 (부드러운 스크롤 효과 등) -->
+    <script>
+        // 네비게이션 클릭 시 부드럽게 스크롤 이동
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
